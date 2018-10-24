@@ -58,6 +58,13 @@ module.exports = {
   module: {
     rules: [
       {
+        test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
+        loader: require.resolve("file-loader"),
+        options: {
+          name: "/assets/[name].[hash:8].[ext]"
+        }
+      },
+      {
         test: /\.js$/,
         use: ["babel-loader"],
         include: path.join(__dirname, "src")
