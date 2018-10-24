@@ -1,9 +1,9 @@
 {
-  "short_name": "Phaser3App",
-  "name": "Phaser3ES6Webpack",
-  "start_url": "./index.html",
-  "display": "standalone",
-  "theme_color": "#ffffff",
-  "background_color": "#000000",
-  "description": "Phaser3 App."
+    "short_name": "Phaser3App",
+    "name": "Phaser3ES6NodeJsWebpack",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "theme_color": "#ffffff",
+    "background_color": "#000000",
+    "description": "Phaser3 App."
 }

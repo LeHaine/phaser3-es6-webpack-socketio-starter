@@ -43,7 +43,9 @@ module.exports = {
       port: process.env.PORT || 3000,
       server: {
         baseDir: ["./", "./build"]
-      }
+      },
+      target: "http://localhost:8080",
+      ws: true
     })
   ],
   module: {

@@ -1,11 +1,13 @@
 {
-    "name": "PhaserES6Webpack",
+    "name": "PhaserES6NodeJsWebpack",
     "version": "1.2.1",
     "description": "",
     "author": "",
     "main": "index.js",
     "scripts": {
-        "dev": "webpack",
+        "dev-client": "webpack",
+        "dev-server": "nodemon ./src/server/server.js",
+        "dev": "concurrently \"npm run dev-server\" \"npm run dev-client\"",
         "deploy": "webpack --config webpack.production.config.js",
         "test": "eslint './src/**/*.js'"
     },
@@ -19,6 +21,7 @@
         "browser-sync": "^2.26.3",
         "browser-sync-webpack-plugin": "^2.0.1",
         "clean-webpack-plugin": "^0.1.18",
+        "concurrently": "^4.0.1",
         "copy-webpack-plugin": "^4.4.1",
         "eslint": "^4.17.0",
         "eslint-config-prettier": "^3.1.0",
@@ -30,12 +33,16 @@
         "eslint-plugin-standard": "^3.0.1",
         "expose-loader": "^0.7.4",
         "html-webpack-plugin": "^2.30.1",
+        "nodemon": "^1.18.4",
         "webpack": "^3.11.0",
         "workbox-webpack-plugin": "^3.6.2"
     },
     "dependencies": {
+        "express": "^4.16.4",
         "idiom.js": "^1.0.0",
         "phaser": "^3.15.1",
+        "socket.io": "^2.1.1",
+        "socket.io-client": "^2.1.1",
         "webfontloader": "^1.6.28"
     }
 }
